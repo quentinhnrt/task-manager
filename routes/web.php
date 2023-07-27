@@ -15,8 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('guest.home');
-})->middleware('guest')->name('guest.home');
-
-Route::middleware('auth')->group(function () {
-
-});
+})->name('guest.home');
