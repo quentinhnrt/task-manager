@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('status')->default('incomplete');
             $table->foreignId('user_id')->constrained();
             $table->foreignId('assigned_to')->constrained('users');
-            $table->foreignId('group_id')->constrained();
+            $table->foreignId('group_id')->constrained('teams');
             $table->timestamps();
         });
     }
